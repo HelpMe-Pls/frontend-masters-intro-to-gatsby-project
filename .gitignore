@@ -1,6 +1,14 @@
 node_modules/
 .cache/
+.yarn/
 public
 
 # Local Netlify folder
 .netlify
+package-lock.json
+.yarn/releases/yarn-berry.cjs
+.yarnrc.yml
+yarn.lock
+.pnp.cjs
+.pnp.loader.mjs
+.nvmrc
