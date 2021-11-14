@@ -1,6 +1,7 @@
 import * as React from 'react'; //must have
 import Seo from '../components/seo.js';
 import { Link, useStaticQuery, graphql } from 'gatsby';
+import '../styles/global.css';
 
 const Layout = ({
 	children,
