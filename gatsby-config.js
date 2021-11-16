@@ -7,6 +7,7 @@ module.exports = {
 		image: 'https://www.stjude.cloud/static/data-universe-v500-2fd94de5b7fee27353e38838e2814503.png',
 	},
 	plugins: [
+		// every <yarn add plugin...> MUST be listed here
 		'gatsby-plugin-react-helmet',
 
 		// These are the plugins that are used to enable the MDX rules for pages from src/posts
@@ -31,5 +32,15 @@ module.exports = {
 				},
 			},
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `images`,
+				path: `${__dirname}/src/images`,
+			},
+		},
+		'gatsby-plugin-image',
+		'gatsby-plugin-sharp',
+		'gatsby-transformer-sharp',
 	],
 };

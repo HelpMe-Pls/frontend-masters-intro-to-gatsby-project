@@ -1,0 +1,11 @@
+.image-wrapper {
+	display: flex;
+	align-items: center; /* for vertical center alignment */
+	justify-content: center; /* for horizontal center alignment */
+}
+
+.image-wrapper [data-gatsby-image-wrapper] {
+	/* [data-gatsby-image-wrapper] so that the border is applied to the image */
+	border-radius: 50%; /* to get rounded border */
+	border: 3px solid var(--black);
+}

@@ -3,7 +3,7 @@
 	color: var(--white);
 	display: flex; /* flex-direction: row; to have the contents spreaded on a row inside the container */
 	justify-content: space-between;
-	padding: 1rem; /* padding-left: 1rem; padding-right: 1rem; rem is the inherited unit from the root element's font-size (18px) */
+	padding: 1rem; /* rem is the inherited unit from the root element's font-size (18px) */
 }
 
 .header a {

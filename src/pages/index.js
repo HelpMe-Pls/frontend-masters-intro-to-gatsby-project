@@ -1,6 +1,8 @@
 import * as React from 'react'; //must have
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout';
+import { imageWrapper } from '../styles/index.module.css';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // every components MUST be <default> export
 export default function IndexPage() {
@@ -24,6 +26,15 @@ export default function IndexPage() {
 
 	return (
 		<Layout>
+			<div className={imageWrapper}>
+				<StaticImage
+					src="../images/ivana-la-61jg6zviI7I-unsplash.jpg"
+					alt="Stupid dog, you make me look bad"
+					placeholder="dominantColor"
+					width={300}
+					height={300}
+				/>
+			</div>
 			<h1>Look MA !</h1>
 			<Link to="/about">About</Link>
 			{/* Using <Link> actually makes it faster than using the back button, by not having to refresh the page */}
