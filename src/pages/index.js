@@ -30,7 +30,7 @@ export default function IndexPage() {
 				<StaticImage
 					src="../images/ivana-la-61jg6zviI7I-unsplash.jpg"
 					alt="Stupid dog, you make me look bad"
-					placeholder="dominantColor"
+					placeholder="tracedSVG"
 					width={300}
 					height={300}
 				/>

@@ -24,9 +24,18 @@ module.exports = {
 				path: `${__dirname}/src/posts`,
 			},
 		},
+		'gatsby-remark-images', // to add images to MDX pages
 		{
 			resolve: `gatsby-plugin-mdx`,
 			options: {
+				gatsbyRemarkPlugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 1200,
+						},
+					},
+				],
 				defaultLayouts: {
 					posts: require.resolve('./src/components/post-layout.js'), // Common layout for the .mdx pages from src/posts
 				},
