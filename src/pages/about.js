@@ -16,6 +16,7 @@ export const query = graphql`
 
 // every components MUST be <default> export
 const AboutPage = ({ data }) => {
+	// {data} is injected by the query above
 	return (
 		<Layout title="About" description="It is what it is">
 			<GatsbyImage image={getImage(data.file)} alt="Cock with a tail" />
