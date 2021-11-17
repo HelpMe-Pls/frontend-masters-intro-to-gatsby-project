@@ -19,10 +19,27 @@ export default function IndexPage() {
 					}
 				}
 			}
+			allSanityEpisode(
+				sort: { fields: date, order: DESC }
+				filter: { youtubeID: { ne: null } }
+				limit: 20
+			) {
+				nodes {
+					id # for unique keys in the <li>
+					title
+					guest {
+						name
+					}
+					gatsbyPath( # generating actual URLs from the dynamic file name
+						filePath: "/episode/{SanityEpisode.slug__current}"
+					)
+				}
+			}
 		}
 	`);
 
 	const posts = data.allMdx.nodes;
+	const episodes = data.allSanityEpisode.nodes;
 
 	return (
 		<Layout>
@@ -47,6 +64,23 @@ export default function IndexPage() {
 					</li>
 				))}
 			</ul>
+
+			<h2>
+				Latest episodes of <em>Learn With Jason</em>
+			</h2>
+			<ul>
+				{episodes.map((episode) => (
+					<li key={episode.id}>
+						<Link to={episode.gatsbyPath}>
+							{episode.title} (with {episode.guest?.[0]?.name}){' '}
+							{/* .[0]? because Jason set the {guest} to be an array, if it was an object we could get rid of it */}
+						</Link>
+					</li>
+				))}
+			</ul>
+			<a href="https://www.learnwithjason.dev/">
+				Watch all episodes of <em>Learn With Jason</em>
+			</a>
 		</Layout>
 	);
 }
