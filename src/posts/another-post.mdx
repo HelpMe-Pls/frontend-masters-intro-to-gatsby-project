@@ -4,6 +4,23 @@ title: My other blog
 description: It is what it is
 ---
 
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+export const query = graphql`
+	query SmashBurgerQuery {
+		file(name: { eq: "smashburger" }) {
+			childImageSharp {
+				gatsbyImageData(placeholder: DOMINANT_COLOR)
+			}
+		}
+	}
+`;
+
 # Look MAAA!
+
+<!-- the query's result will be passed into {props} so we have to use it as-is, can't be destructured like in .js files -->
+
+<GatsbyImage image={getImage(props.data.file)} alt="It is what it is" />
 
 Another post

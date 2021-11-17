@@ -2,7 +2,7 @@ import * as React from 'react'; //must have
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-export default function Seo(props) {
+const Seo = (props) => {
 	const data = useStaticQuery(graphql`
 		query GetSiteMetadata {
 			site {
@@ -44,4 +44,6 @@ export default function Seo(props) {
 			{image && <meta name="twitter:image" content={image} />}
 		</Helmet>
 	);
-}
+};
+
+export default Seo;
