@@ -52,7 +52,6 @@ const SanityEpisode = ({ data }) => {
 					</a>
 				</li>
 			</ul>
-			<p>Some new information.</p>
 		</Layout>
 	);
 };
