@@ -23,7 +23,7 @@ export const query = graphql`
 `;
 
 const SanityEpisode = ({ data }) => {
-	// {data} is the query's result
+	// {data} is the query's result, and it HAS TO BE used as-is because it's reserved by Gatsby
 	const episode = data.sanityEpisode;
 
 	return (

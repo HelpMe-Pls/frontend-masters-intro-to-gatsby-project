@@ -8,7 +8,7 @@ module.exports = {
 	},
 	plugins: [
 		// every <yarn add plugin...> MUST be listed here (doesn't have to be in order)
-		'gatsby-plugin-react-helmet',
+		'gatsby-plugin-react-helmet', // <Helmet> is like the <head> tag, but on steroids
 
 		// These are the plugins that are used to enable the MDX rules for pages from src/posts
 		{

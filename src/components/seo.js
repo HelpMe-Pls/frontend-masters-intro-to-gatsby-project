@@ -28,6 +28,7 @@ const Seo = (props) => {
 			<title>{title}</title>
 			<meta name="description" content={description} />
 			<link rel="canonical" href={url} />
+			<link rel="apple-touch-icon" href="../images/icon_8W1_icon.ico" />
 			{image && <meta name="image" content={image} />}
 
 			{/* SEO on Facebook */}
