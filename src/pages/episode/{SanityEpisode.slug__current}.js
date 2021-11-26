@@ -1,3 +1,6 @@
+// the curly braces wrapped around the file's name means it'll be dynamically generated. {SanityEpisode} is the data's Type of the Node
+// {slug__current} is the field's name that will be used to query the data
+
 import { GatsbyImage } from 'gatsby-plugin-image';
 import * as React from 'react'; //must have
 import { graphql } from 'gatsby';
