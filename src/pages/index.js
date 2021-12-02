@@ -7,6 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 // every components MUST be <default> export
 export default function IndexPage() {
 	const data = useStaticQuery(graphql`
+		# StaticQuery CANNOT contain variables
 		query GetBlogPost {
 			allMdx(sort: { fields: frontmatter___date, order: DESC }) {
 				nodes {
